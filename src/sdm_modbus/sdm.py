@@ -306,6 +306,8 @@ class SDM630(SDM):
             "maximum_demand_power_apparent": (0x0066, 2, meter.registerType.INPUT, meter.registerDataType.FLOAT32, float, "Maximum System Power (Apparent)", "VA", 2, 1),
             "neutral_demand_current": (0x0068, 2, meter.registerType.INPUT, meter.registerDataType.FLOAT32, float, "Neutral Demand Current", "A", 2, 1),
             "maximum_neutral_demand_current": (0x006a, 2, meter.registerType.INPUT, meter.registerDataType.FLOAT32, float, "Maximum Neutral Demand Current", "A", 2, 1),
+            "total_system_demand_power_reactive": (0x006c, 2, meter.registerType.INPUT, meter.registerDataType.FLOAT32, float, "Total System Demand Power (Reactive)", "VAr", 2, 1),
+            "maximum_total_system_demand_power_reactive": (0x006e, 2, meter.registerType.INPUT, meter.registerDataType.FLOAT32, float, "Maximum Total System Demand Power (Reactive)", "VAr", 2, 1),
             "l12_voltage": (0x00c8, 2, meter.registerType.INPUT, meter.registerDataType.FLOAT32, float, "L1-L2 Voltage", "V", 3, 1),
             "l23_voltage": (0x00ca, 2, meter.registerType.INPUT, meter.registerDataType.FLOAT32, float, "L2-L3 Voltage", "V", 3, 1),
             "l31_voltage": (0x00cc, 2, meter.registerType.INPUT, meter.registerDataType.FLOAT32, float, "L3-L1 Voltage", "V", 3, 1),
@@ -350,7 +352,6 @@ class SDM630(SDM):
             "l1_energy_reactive": (0x0178, 2, meter.registerType.INPUT, meter.registerDataType.FLOAT32, float, "L1 Total Energy (Reactive)", "kVArh", 4, 1),
             "l2_energy_reactive": (0x017a, 2, meter.registerType.INPUT, meter.registerDataType.FLOAT32, float, "L2 Total Energy (Reactive)", "kVArh", 4, 1),
             "l3_energy_reactive": (0x017c, 2, meter.registerType.INPUT, meter.registerDataType.FLOAT32, float, "L3 Total Energy (Reactive)", "kVArh", 4, 1),
-
             "demand_time": (0x0000, 2, meter.registerType.HOLDING, meter.registerDataType.FLOAT32, int, "Demand Time", "s", 1, 1),
             "demand_period": (0x0002, 2, meter.registerType.HOLDING, meter.registerDataType.FLOAT32, int, "Demand Period", "s", 1, 1),
             "system_voltage": (0x0006, 2, meter.registerType.HOLDING, meter.registerDataType.FLOAT32, float, "System Voltage", "V", 1, 1),
